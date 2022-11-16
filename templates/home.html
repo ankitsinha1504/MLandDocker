@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1 class="pb-2 mt-4 mb-2 border-bottom" style="text-align: center;">Boston House Price Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post" class="container" style="width: 26rem;">
+      <label for="exampleFormControlInput1" class="form-label">CRIM</label>
+      <input type="text" class="form-control" name="CRIM" placeholder="CRIM" required="required" /><br>
+      <label for="exampleFormControlInput1" class="form-label">ZN</label>
+
+    	<input type="text" name="ZN" class="form-control" placeholder="ZN" required="required" /><br>
+        <label for="exampleFormControlInput1" class="form-label">INDUS</label>
+
+        <input type="text" name="INDUS" class="form-control" placeholder="INDUS" required="required" /><br>
+          <label for="exampleFormControlInput1" class="form-label">CHAS</label>
+
+        <input type="text" name="CHAS" class="form-control" placeholder="CHAS" required="required" /><br>
+          <label for="exampleFormControlInput1" class="form-label">NOX</label>
+
+        <input type="text" name="NOX" class="form-control" placeholder="NOX" required="required" /><br>
+          <label for="exampleFormControlInput1" class="form-label">RM</label>
+
+        <input type="text" name="RM" class="form-control" placeholder="RM" required="required" /><br>
+          <label for="exampleFormControlInput1" class="form-label">AGE</label>
+
+        <input type="text" name="Age" class="form-control" placeholder="Age" required="required" /><br>
+          <label for="exampleFormControlInput1" class="form-label">DIS</label>
+
+        <input type="text" name="DIS" class="form-control" placeholder="DIS" required="required" /><br>
+          <label for="exampleFormControlInput1" class="form-label">RAD</label>
+
+        <input type="text" name="RAD" class="form-control" placeholder="RAD" required="required" /><br>
+          <label for="exampleFormControlInput1" class="form-label">TAX</label>
+
+        <input type="text" name="TAX" class="form-control" placeholder="TAX" required="required" /><br>
+          <label for="exampleFormControlInput1" class="form-label">PTRATIO</label>
+
+        <input type="text" name="PTRATIO" class="form-control" placeholder="PTRATIO" required="required" /><br>
+          <label for="exampleFormControlInput1" class="form-label">B</label>
+
+        <input type="text" name="B" class="form-control" placeholder="B" required="required" /><br>
+          <label for="exampleFormControlInput1" class="form-label">LSTAT</label>
+
+        <input type="text" name="LSTAT" class="form-control" placeholder="LSTAT" required="required" /><br>
+
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
